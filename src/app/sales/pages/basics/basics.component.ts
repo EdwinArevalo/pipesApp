@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class BasicsComponent implements OnInit {
+export class BasicsComponent{
+ 
+  nameLower: string = 'edwin';
+  nameUpper: string = 'EDWIN';
+  nameComplete: string = 'edWiN WilLiaM';
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  date: Date = new Date();
 }

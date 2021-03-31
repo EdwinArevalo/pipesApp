@@ -1,9 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AppRouterModule } from './app-router.module';
+import { SalesModule } from './sales/sales.module';
+
+//change Languaje
+import localeEsPE from '@angular/common/locales/es-PE';
+import localeEsFR from '@angular/common/locales/fr';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEsPE);
+registerLocaleData(localeEsFR);
 
 @NgModule({
   declarations: [
@@ -12,9 +20,12 @@ import { AppRouterModule } from './app-router.module';
   imports: [
     BrowserModule,
     SharedModule,
-    AppRouterModule
+    AppRouterModule,
+    SalesModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es-PE'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
