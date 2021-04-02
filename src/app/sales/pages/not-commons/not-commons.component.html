@@ -7,13 +7,41 @@
 
 <div class="p-grid">
     <div class="p-col p-md-6 p-sm-9">
-        <h5>Toggleable</h5>
-        <p-fieldset legend="Header" [toggleable]="true"> 
+        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true"> 
+            <p>Sludos {{name}} es un placer 
+                {{ gender | i18nSelect: joinMapa }}
+                 a nuestro evento. <br>
+            </p>
+            <span class="p-buttonset">
+            <button pButton type="button" (click)="changeName()" label="Change" icon="pi pi-refresh"></button>
+        </span>
         </p-fieldset>
     </div>
     <div class="p-col p-md-6 p-sm-9">
-        <h5>Toggleable</h5>
-        <p-fieldset legend="Header" [toggleable]="true"> 
+        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true"> 
+            <p>Actualmente {{clients.length | i18nPlural: clientsCountMapa}} <br></p>
+            <span class="p-buttonset">
+                <button pButton type="button" (click)="addClient()" label="Add" icon="pi pi-plus"></button>
+                <button pButton type="button" (click)="deleteClient()" label="Delete" icon="pi pi-trash"></button>
+            </span>
         </p-fieldset>
+        
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true"> 
+             <b>Original</b>
+             <pre>{{clients}}</pre>
+
+             <b>Slice:0:2</b>
+             <pre>{{clients | slice:0:2}}</pre>
+
+             <b>Slice:1:2</b>
+             <pre>{{clients | slice:1:2}}</pre>
+
+             <b>Slice:2:3</b>
+             <pre>{{clients | slice:2:3}}</pre>
+        </p-fieldset>
+        
     </div>
 </div>
