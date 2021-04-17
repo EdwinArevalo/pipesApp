@@ -5,6 +5,7 @@ import { NotCommonsComponent } from './pages/not-commons/not-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderingComponent } from './pages/ordering/ordering.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
 
 
 
@@ -13,7 +14,8 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     NumbersComponent,
     NotCommonsComponent, 
     BasicsComponent, 
-    OrderingComponent
+    OrderingComponent,
+    MayusculasPipe
   ],
   exports: [
     NumbersComponent,

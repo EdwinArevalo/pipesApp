@@ -42,6 +42,7 @@ export class MenuComponent implements OnInit {
         {
             label: 'Personalizados',
             icon: 'pi pi-pencil',
+            routerLink: 'ordenar'
         },
     ];
 }

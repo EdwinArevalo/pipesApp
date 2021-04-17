@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-not-commons',
@@ -42,5 +43,14 @@ export class NotCommonsComponent implements OnInit {
   deleteClient(){
     this.clients.pop();
   }
+
+  person = {
+    name: 'edwin',
+    age: 19,
+    address: 'Lima, Perú'
+  }
+
+
+  myObservable =  interval(1000);
   
 }
