@@ -11,6 +11,8 @@ import { SalesModule } from './sales/sales.module';
 import localeEsPE from '@angular/common/locales/es-PE';
 import localeEsFR from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 registerLocaleData(localeEsPE);
 registerLocaleData(localeEsFR);
 
@@ -24,6 +26,12 @@ registerLocaleData(localeEsFR);
     SharedModule,
     AppRouterModule,
     SalesModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es-PE'}
