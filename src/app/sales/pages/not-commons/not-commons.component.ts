@@ -37,7 +37,7 @@ export class NotCommonsComponent implements OnInit {
   }
 
   addClient(){
-    this.clients.push('Ewas');
+    this.clients.push('Edwin');
   }
 
   deleteClient(){

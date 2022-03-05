@@ -11,7 +11,7 @@ export class OrderingComponent implements OnInit {
 
   constructor() { }
 
-  nosotros : string = 'eWaS'
+  nosotros : string = 'Edwin'
 
   ngOnInit(): void {
   }
@@ -19,17 +19,17 @@ export class OrderingComponent implements OnInit {
 
   heroes: Hero[] = [
     {
-      name:'Ewas',
+      name:'Edwin',
       color: Color.azul,
       vuela: true
     },
     {
-      name:'Ewas 2',
+      name:'Edwin 2',
       color: Color.negro,
       vuela: true
     },
     {
-      name:'Ewas 4',
+      name:'Edwin 4',
       color: Color.rojo,
       vuela: false
     },
